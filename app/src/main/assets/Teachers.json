@@ -1,0 +1,20 @@
+[
+  {
+    "teacherId":"1",
+    "teacherName":"Shyam Kumar",
+    "teacherImage" : "abc",
+    "subjectId" : "1",
+    "subjectName" : "English",
+    "phn":"1234567890",
+    "email":"shyam@gmail.com"
+  },
+  {
+    "teacherId":"2",
+    "teacherName":"Varun Sood",
+    "teacherImage" : "abc",
+    "subjectId" : "2",
+    "subjectName" : "Maths",
+    "phn":"1234567890",
+    "email":"varun@gmail.com"
+  }
+]

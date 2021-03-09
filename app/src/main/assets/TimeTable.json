@@ -1,0 +1,24 @@
+[
+  {
+  "startTime" : "9:35AM",
+  "endTime" : "10:30AM",
+  "subjectid":"1",
+  "subjectName":"Telugu",
+  "tecaherId":"1",
+  "teacherName":"ABC1",
+  "exp":"10",
+  "isTheory" : true,
+  "isPractical" : true
+},
+  {
+    "startTime" : "10:35AM",
+    "endTime" : "11:10AM",
+    "subjectid":"1",
+    "subjectName":"English",
+    "tecaherId":"1",
+    "teacherName":"ABC2",
+    "exp":"4",
+    "isTheory" : true,
+    "isPractical" : false
+  }
+]

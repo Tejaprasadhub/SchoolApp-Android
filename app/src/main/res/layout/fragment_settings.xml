@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.Fragments.SettingsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/heading"
+        android:background="@mipmap/internal_header">
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/backBtn"
+            android:background="@android:color/transparent"
+            android:src="@mipmap/back_arrow"
+            android:layout_gravity="center"
+            android:layout_marginTop="-10dp"
+            android:translationZ="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:id="@+id/headingText"
+            android:gravity="center"
+            android:layout_marginTop="-10dp"
+            android:layout_marginLeft="-35dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/rubik_bold" />
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_below="@+id/heading">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="5"
+                android:background="#EFEEEE"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:id="@+id/langugageLayout"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/lang"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="Language"
+                    android:textSize="15sp"
+                    android:textColor="@color/appThemeColor"
+                    />
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="5"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="#EFEEEE"
+                android:id="@+id/contactusLayout"
+                android:layout_below="@+id/langugageLayout"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/contact_us"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:text="Contact Us"
+                    android:fontFamily="@font/rubik_regular"
+                    android:textSize="15sp"
+                    android:textColor="@color/appThemeColor"
+                    />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="5"
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="10dp"
+                android:padding="4dp"
+                android:background="#EFEEEE"
+                android:id="@+id/about_legalLayout"
+                android:layout_below="@+id/contactusLayout"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="3dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/about_legal"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:text="About and Legal"
+                    android:fontFamily="@font/rubik_regular"
+                    android:textSize="15sp"
+                    android:textColor="@color/appThemeColor"
+                    />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="5"
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="10dp"
+                android:padding="3dp"
+                android:id="@+id/helpLayout"
+                android:background="#EFEEEE"
+                android:layout_below="@+id/about_legalLayout"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="3dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/help"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:text="Help"
+                    android:fontFamily="@font/rubik_regular"
+                    android:textSize="15sp"
+                    android:textColor="@color/appThemeColor"
+                    />
+
+
+            </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

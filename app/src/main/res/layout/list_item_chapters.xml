@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="Chapter 1"
+                android:lines="1"
+                android:id="@+id/chapterName"
+                android:textColor="@color/appThemeColor"
+                android:textSize="15sp"
+                android:fontFamily="@font/rubik_regular"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/chapterName"
+                android:id="@+id/chapterDesc"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tempor, ipsum sed volutpat convallis, lorem nibh faucibus ligula, eget suscipit erat neque vitae leo. Duis sodales iaculis augue, quis dapibus erat luctus non. In ac lobortis felis. Vivamus semper dapibus risus eget euismod. Praesent faucibus libero ac ultricies aliquet. Ut luctus hendrerit gravida."
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:fontFamily="@font/rubik_regular"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

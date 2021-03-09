@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Fragments.ParentSide.HomeworkFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/heading"
+        android:background="@mipmap/internal_header">
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/backBtn"
+            android:background="@android:color/transparent"
+            android:src="@mipmap/back_arrow"
+            android:layout_gravity="center"
+            android:layout_marginTop="-10dp"
+            android:translationZ="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HomeWork"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_marginTop="-10dp"
+            android:layout_marginLeft="-35dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/rubik_bold" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heading"
+        android:id="@+id/subjectsList" />
+
+</RelativeLayout>

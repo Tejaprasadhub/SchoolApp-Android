@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.Fragments.ParentSide.TimeTableFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/heading"
+        android:background="@mipmap/internal_header">
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/backBtn"
+            android:background="@android:color/transparent"
+            android:src="@mipmap/back_arrow"
+            android:layout_gravity="center"
+            android:layout_marginTop="-10dp"
+            android:translationZ="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Time Table"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_marginTop="-10dp"
+            android:layout_marginLeft="-35dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/rubik_bold" />
+    </LinearLayout>
+
+    <devs.mulham.horizontalcalendar.HorizontalCalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heading"
+        android:background="@color/appThemeOpacity"
+        app:textColorNormal="@color/white"
+        app:textColorSelected="@color/white"
+        app:selectorColor="@color/appThemeColor"
+        app:selectedDateBackground="@color/appThemeColor"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/calendarView"
+        android:layout_margin="5dp"
+        android:background="@color/white"
+        android:id="@+id/timeTableList" />
+
+</RelativeLayout>

@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.Fragments.TeacherSide.AddHomeWorkFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/heading"
+        android:background="@mipmap/internal_header">
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/backBtn"
+            android:background="@android:color/transparent"
+            android:src="@mipmap/back_arrow"
+            android:layout_gravity="center"
+            android:layout_marginTop="-10dp"
+            android:translationZ="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add HomeWork"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_marginTop="-10dp"
+            android:layout_marginLeft="-35dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/rubik_bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/heading"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:id="@+id/class_sec_Layout"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/classNameSelect"
+                    android:layout_margin="5dp"
+                    android:weightSum="3"
+                    android:background="@drawable/edittext_bg"
+                    android:orientation="horizontal">
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.5">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:fontFamily="@font/rubik_regular"
+                            android:textSize="15sp"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:id="@+id/selectClass"
+                            android:text="Select Class"
+                            android:textColor="@color/appThemeColor"/>
+
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="0.5"
+                        android:src="@mipmap/down_arrow"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:weightSum="3"
+                    android:background="@drawable/edittext_bg"
+                    android:layout_margin="5dp"
+                    android:id="@+id/sectionSelect"
+                    android:orientation="horizontal">
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.5">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:fontFamily="@font/rubik_regular"
+                            android:textSize="15sp"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:id="@+id/selectSec"
+                            android:text="Select Section"
+                            android:textColor="@color/appThemeColor"/>
+
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="0.5"
+                        android:src="@mipmap/down_arrow"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/subjectLayout"
+                android:layout_margin="5dp"
+                android:layout_below="@+id/class_sec_Layout">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Subject"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/subject_heading"
+                    android:layout_marginTop="5dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/appThemeColor"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/selectSubjectLayout"
+                    android:layout_below="@+id/subject_heading"
+                    android:layout_margin="5dp"
+                    android:weightSum="3"
+                    android:background="@drawable/edittext_bg"
+                    android:orientation="horizontal">
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.7">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:fontFamily="@font/rubik_regular"
+                            android:textSize="15sp"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:id="@+id/selectSubject"
+                            android:text="Select"
+                            android:textColor="@color/appThemeColor"/>
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="0.2"
+                        android:src="@mipmap/down_arrow"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"/>
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/subjectLayout"
+                android:id="@+id/assign_submit_layout"
+                android:layout_margin="5dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2">
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Assign Date"
+                            android:layout_marginLeft="10dp"
+                            android:id="@+id/assign_heading"
+                            android:layout_marginTop="5dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/appThemeColor"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/assignDate"
+                            android:layout_below="@+id/assign_heading"
+                            android:layout_margin="5dp"
+                            android:weightSum="3"
+                            android:background="@drawable/edittext_bg"
+                            android:orientation="horizontal">
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2.3">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="55dp"
+                                    android:layout_gravity="center"
+                                    android:padding="10dp"
+                                    android:fontFamily="@font/rubik_regular"
+                                    android:textSize="15sp"
+                                    android:layout_centerVertical="true"
+                                    android:gravity="center"
+                                    android:id="@+id/selectAssignDate"
+                                    android:text="Select"
+                                    android:textColor="@color/appThemeColor"/>
+
+                            </RelativeLayout>
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="0.7"
+                                android:src="@mipmap/calendar"
+                                android:scaleType="fitXY"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="5dp"/>
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Submission Date"
+                            android:layout_marginLeft="10dp"
+                            android:id="@+id/submit_heading"
+                            android:layout_marginTop="5dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/appThemeColor"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/submitDate"
+                            android:layout_below="@+id/submit_heading"
+                            android:layout_margin="5dp"
+                            android:weightSum="3"
+                            android:background="@drawable/edittext_bg"
+                            android:orientation="horizontal">
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2.3">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="55dp"
+                                    android:layout_gravity="center"
+                                    android:padding="10dp"
+                                    android:fontFamily="@font/rubik_regular"
+                                    android:textSize="15sp"
+                                    android:layout_centerVertical="true"
+                                    android:gravity="center"
+                                    android:id="@+id/selectSubmitDate"
+                                    android:text="Select"
+                                    android:textColor="@color/appThemeColor"/>
+
+                            </RelativeLayout>
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="0.7"
+                                android:src="@mipmap/calendar"
+                                android:scaleType="fitXY"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="5dp"/>
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/titleLayout"
+                android:layout_below="@id/assign_submit_layout"
+                android:layout_margin="5dp"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Title"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/title_heading"
+                    android:layout_marginTop="5dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/appThemeColor"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/title_heading"
+                    android:background="@drawable/edittext_bg"
+                    android:hint="Homework title"
+                    android:padding="5dp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:textColorHint="@color/appThemeColor"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/homeworkTitle"
+                    android:textAlignment="center" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titleLayout"
+                android:id="@+id/descLayout"
+                android:layout_margin="5dp"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/desc_heading"
+                    android:layout_marginTop="5dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/appThemeColor"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_below="@+id/desc_heading"
+                    android:background="@drawable/edittext_bg"
+                    android:hint="Description here"
+                    android:padding="5dp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:textColorHint="@color/appThemeColor"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/desc"
+                    android:lines="6"
+                    android:maxLines="6"
+                    android:minLines="5"
+                    android:textAlignment="center" />
+
+            </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/descLayout"
+            android:id="@+id/addFileLayout"
+            android:layout_margin="5dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:id="@+id/uploadBtnLayout"
+                android:weightSum="6">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Attach File"
+                    android:layout_weight="5"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/addFile_heading"
+                    android:textSize="16sp"
+                    android:textColor="@color/appThemeColor"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@mipmap/attach_file"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/selectFileLayout"
+                android:layout_below="@+id/uploadBtnLayout"
+                android:layout_margin="5dp"
+                android:visibility="gone"
+                android:weightSum="3"
+                android:background="@drawable/edittext_bg"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.7">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center"
+                        android:padding="10dp"
+                        android:fontFamily="@font/rubik_regular"
+                        android:textSize="15sp"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:id="@+id/selectedFile"
+                        android:text="uploaded_file"
+                        android:textColor="@color/appThemeColor"/>
+
+                </RelativeLayout>
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:id="@+id/removeFile"
+                    android:src="@mipmap/close_btn"
+                    android:background="@color/white"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"/>
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/submitBtn"
+                android:text="Submit"
+                android:background="@drawable/login_btn"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="20dp"
+                android:layout_below="@+id/addFileLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"/>
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

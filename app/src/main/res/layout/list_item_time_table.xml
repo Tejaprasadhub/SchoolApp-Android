@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:elevation="5dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp"
+    android:layout_margin="5dp">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:id="@+id/contentLayout"
+    android:orientation="horizontal"
+    android:weightSum="3">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.8"
+        android:weightSum="5"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center"
+            android:src="@mipmap/dot_ine" />
+        
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="3.9"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="10:20AM"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:fontFamily="@font/rubik_regular"
+                android:id="@+id/startTime"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="10:20AM"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/rubik_regular"
+                android:layout_below="@+id/startTime"
+                android:id="@+id/endTime"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="0.1"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/appThemeOpacity"/>
+    </LinearLayout>
+<RelativeLayout
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_weight="3">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/topContent"
+        android:weightSum="2"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@mipmap/d" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/appThemeColor"
+                android:id="@+id/subjectName"
+                android:textSize="14sp"
+                android:fontFamily="@font/rubik_regular"
+                android:layout_gravity="center"
+                android:text="English" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/exp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="@font/rubik_regular"
+                android:layout_gravity="center"
+                android:id="@+id/exp"
+                android:textSize="13sp"
+                android:text="10Yrs" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_below="@+id/topContent"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/avater" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:id="@+id/teacherName"
+            android:textSize="13sp"
+            android:fontFamily="@font/rubik_regular"
+            android:layout_gravity="center"
+            android:text="10Yrs" />
+    </LinearLayout>
+</RelativeLayout>
+</LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/contentLayout"
+    android:orientation="horizontal"
+    android:weightSum="2">
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:layout_marginRight="2dp"
+        android:id="@+id/practicalLayout"
+        android:background="@color/appThemeColor">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_centerInParent="true"
+            android:text="Practical"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="2dp"
+        android:id="@+id/theoryLayout"
+        android:background="@color/appThemeColor">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_centerInParent="true"
+            android:text="Theory"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+</LinearLayout>
+</RelativeLayout>
+</androidx.cardview.widget.CardView>
+</RelativeLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Fragments.ExamsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/heading"
+        android:background="@mipmap/internal_header">
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/backBtn"
+            android:background="@android:color/transparent"
+            android:src="@mipmap/back_arrow"
+            android:layout_gravity="center"
+            android:layout_marginTop="-10dp"
+            android:translationZ="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Exams"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_marginTop="-10dp"
+            android:layout_marginLeft="-35dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/rubik_bold" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/heading"
+        android:id="@+id/content"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="What are you Looking For ?"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:id="@+id/whats_heading"
+            android:textColor="@color/appThemeColor"
+            android:textSize="22sp"
+            android:textAlignment="center"
+            tools:ignore="RtlCompat" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            android:layout_below="@+id/whats_heading"
+            android:weightSum="2"
+            android:id="@+id/btnLayout"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/login_btn"
+                android:text="Scheduled"
+                android:layout_margin="5dp"
+                android:id="@+id/scheduledExam"
+                android:textColor="@color/white" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/login_btn"
+                android:text="Results"
+                android:id="@+id/results"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/btnLayout"
+            android:src="@mipmap/exam_bg"
+            android:scaleType="fitXY"/>
+    </RelativeLayout>
+
+</RelativeLayout>

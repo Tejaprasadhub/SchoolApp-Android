@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Fragments.MyStuffFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/top_header"
+        android:background="@mipmap/heder">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:orientation="horizontal"
+            android:id="@+id/heading">
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/backBtn"
+                android:background="@android:color/transparent"
+                android:layout_gravity="center"
+                android:layout_marginTop="-10dp"
+                android:translationZ="10dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="My Profile"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_marginTop="-10dp"
+                android:layout_marginLeft="-35dp"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/rubik_bold" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Usharani Guday"
+            android:textSize="22sp"
+            android:layout_below="@id/heading"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:fontFamily="@font/rubik_bold" />
+
+    </RelativeLayout>
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_below="@+id/top_header">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="5"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="10dp"
+                android:padding="5dp"
+                android:background="#EFEEEE"
+                android:id="@+id/viewProfileLayout"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/avater"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="View Profile"
+                    android:textSize="15sp"
+                    android:textColor="@color/appThemeColor"
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:padding="3dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/next"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_below="@+id/viewProfileLayout"
+                android:visibility="gone"
+                android:id="@+id/seperator1"
+                android:background="#dddddd"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="5"
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="10dp"
+                android:padding="8dp"
+                android:background="#EFEEEE"
+                android:id="@+id/editProfileLayout"
+                android:layout_below="@+id/viewProfileLayout"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/edit_profile"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:text="Edit Profile"
+                    android:fontFamily="@font/rubik_regular"
+                    android:textSize="15sp"
+                    android:textColor="@color/appThemeColor"
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:padding="3dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/next"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="15dp"
+                android:id="@+id/seperator2"
+                android:visibility="gone"
+                android:layout_below="@+id/editProfileLayout"
+                android:background="#dddddd"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="5"
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="10dp"
+                android:padding="10dp"
+                android:background="#EFEEEE"
+                android:id="@+id/changePassLayout"
+                android:layout_below="@+id/editProfileLayout"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="3dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/change_pin"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:text="Change Password"
+                    android:fontFamily="@font/rubik_regular"
+                    android:textSize="15sp"
+                    android:textColor="@color/appThemeColor"
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:padding="3dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/next"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="15dp"
+                android:id="@+id/seperator3"
+                android:visibility="gone"
+                android:layout_below="@+id/changePassLayout"
+                android:background="#dddddd"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="5"
+                android:layout_marginTop="15dp"
+                android:id="@+id/settingsLayout"
+                android:background="#EFEEEE"
+                android:layout_marginHorizontal="10dp"
+                android:padding="7dp"
+                android:layout_below="@+id/changePassLayout"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="7dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/settings"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2.95"
+                    android:text="Settings"
+                    android:fontFamily="@font/rubik_regular"
+                    android:textSize="15sp"
+                    android:textColor="@color/appThemeColor"
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:padding="3dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/next"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/seperator4"
+                android:visibility="gone"
+                android:layout_below="@+id/settingsLayout"
+                android:background="#dddddd"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="5"
+                android:layout_marginTop="15dp"
+                android:id="@+id/contactLayout"
+                android:background="#EFEEEE"
+                android:layout_marginHorizontal="10dp"
+                android:padding="8dp"
+                android:layout_below="@+id/settingsLayout"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="4dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/call"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2.95"
+                    android:text="Contact Us"
+                    android:fontFamily="@font/rubik_regular"
+                    android:textSize="15sp"
+                    android:textColor="@color/appThemeColor"
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:padding="3dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/next"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="15dp"
+                android:id="@+id/seperator5"
+                android:visibility="gone"
+                android:layout_below="@+id/contactLayout"
+                android:background="#dddddd"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="5"
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="10dp"
+                android:padding="10dp"
+                android:background="#efeeee"
+                android:id="@+id/signoutLayout"
+                android:layout_below="@+id/contactLayout"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="27dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="7dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/logout"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:text="Signout"
+                    android:fontFamily="@font/rubik_regular"
+                    android:textSize="15sp"
+                    android:textColor="@color/appThemeColor"
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:padding="3dp"
+                    android:visibility="gone"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/next"/>
+            </LinearLayout>
+
+
+
+            
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>

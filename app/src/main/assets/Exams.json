@@ -1,0 +1,136 @@
+[
+  {
+    "id":"1",
+    "examName": "Quarterly-Exams",
+    "classid" : "1",
+    "className"  :"10th",
+    "startDate" : "10-03-2020",
+    "endDate" : "16-03-2020",
+    "status" : "PEN",
+    "examStatus" : "Pass",
+    "totalMarks"  :"600",
+    "secured" : "560",
+    "subject" : [
+      {
+        "id": "",
+        "name" : "Telugu",
+        "total" : "100",
+        "secured" : "98",
+        "status"  :"PEN",
+        "examStatus" : "P",
+        "examDate" : "16-03-2020"
+      },
+      {
+        "id": "",
+        "name" : "Hindi",
+        "total" : "100",
+        "secured" : "98",
+        "status"  :"PEN",
+        "examStatus" : "P",
+        "examDate" : "16-03-2020"
+      },
+      {
+        "id": "",
+        "name" : "English",
+        "total" : "100",
+        "secured" : "98",
+        "status"  :"PEN",
+        "examStatus" : "P",
+        "examDate" : "16-03-2020"
+      },
+      {
+        "id": "",
+        "name" : "Maths",
+        "total" : "100",
+        "secured" : "98",
+        "examStatus" : "P",
+        "status"  :"PEN",
+        "examDate" : "16-03-2020"
+      },
+      {
+        "id": "",
+        "name" : "Science",
+        "total" : "100",
+        "secured" : "98",
+        "examStatus" : "P",
+        "status"  :"PEN",
+        "examDate" : "16-03-2020"
+      },
+      {
+        "id": "",
+        "name" : "Social",
+        "total" : "100",
+        "secured" : "98",
+        "examStatus" : "P",
+        "status"  :"PEN",
+        "examDate" : "16-03-2020"
+      }]
+  },
+  {
+    "id":"2",
+    "examName": "HalfYearly",
+    "classid" : "1",
+    "startDate" : "10-04-2020",
+    "endDate" : "16-04-2020",
+    "className"  :"10th",
+    "status" : "PEN",
+    "examStatus" : "P",
+    "totalMarks"  :"600",
+    "secured" : "560",
+    "subject" : [
+      {
+        "id": "",
+        "name" : "Telugu",
+        "total" : "100",
+        "secured" : "98",
+        "examStatus" : "P",
+        "status"  :"PEN",
+        "examDate" : "16-04-2020"
+      },
+      {
+        "id": "",
+        "name" : "Hindi",
+        "total" : "100",
+        "secured" : "98",
+        "status"  :"PEN",
+        "examStatus" : "P",
+        "examDate" : "16-04-2020"
+      },
+      {
+        "id": "",
+        "name" : "English",
+        "total" : "100",
+        "secured" : "98",
+        "status"  :"PEN",
+        "examStatus" : "P",
+        "examDate" : "16-04-2020"
+      },
+      {
+        "id": "",
+        "name" : "Maths",
+        "total" : "100",
+        "secured" : "98",
+        "status"  :"PEN",
+        "examStatus" : "P",
+        "examDate" : "16-04-2020"
+      },
+      {
+        "id": "",
+        "name" : "Science",
+        "total" : "100",
+        "secured" : "98",
+        "status"  :"PEN",
+        "examStatus" : "P",
+        "examDate" : "16-04-2020"
+      },
+      {
+        "id": "",
+        "name" : "Social",
+        "total" : "100",
+        "secured" : "98",
+        "status"  :"PEN",
+        "examStatus" : "P",
+        "examDate" : "16-04-2020"
+      }]
+  }
+]

@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.Fragments.ContactUsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/heading"
+        android:background="@mipmap/internal_header">
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/backBtn"
+            android:background="@android:color/transparent"
+            android:src="@mipmap/back_arrow"
+            android:layout_gravity="center"
+            android:layout_marginTop="-10dp"
+            android:translationZ="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contact us"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:id="@+id/headingText"
+            android:gravity="center"
+            android:layout_marginTop="-10dp"
+            android:layout_marginLeft="-35dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/rubik_bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/heading">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/contacts_bg"
+        android:id="@+id/image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please fill the below details, we will get back to you"
+        android:textSize="13sp"
+        android:layout_below="@+id/image"
+        android:textAlignment="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginHorizontal="10dp"
+        android:id="@+id/suggestionText"
+        android:fontFamily="@font/rubik_bold" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_below="@+id/suggestionText"
+            android:id="@+id/fullNameLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Full Name"
+                android:layout_marginBottom="-13dp"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:backgroundTint="@color/white"
+                android:paddingHorizontal="5dp"
+                android:layout_marginLeft="35dp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:translationZ="-20dp"
+                android:background="@drawable/personal_fields_bg"
+                >
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="12dp"
+                    android:id="@+id/fullNameET"
+                    android:hint=" Name "
+                    android:textSize="14sp"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/appThemeColor"
+                    android:fontFamily="@font/rubik_regular"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity = "center"
+                    android:textAlignment="center" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_below="@+id/fullNameLayout"
+            android:id="@+id/emailLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:layout_marginBottom="-13dp"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:backgroundTint="@color/white"
+                android:paddingHorizontal="5dp"
+                android:layout_marginLeft="35dp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:translationZ="-20dp"
+                android:background="@drawable/personal_fields_bg"
+                >
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="12dp"
+                    android:id="@+id/email"
+                    android:hint=" yourname@gmail.com "
+                    android:textSize="14sp"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/appThemeColor"
+                    android:fontFamily="@font/rubik_regular"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity = "center"
+                    android:textAlignment="center" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/emailLayout"
+            android:layout_marginHorizontal="10dp"
+            android:id="@+id/mobileLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mobile"
+                android:layout_marginBottom="-13dp"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:backgroundTint="@color/white"
+                android:paddingHorizontal="5dp"
+                android:layout_marginLeft="35dp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:translationZ="-20dp"
+                android:background="@drawable/personal_fields_bg"
+                >
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="12dp"
+                    android:id="@+id/mobile"
+                    android:hint=" Mobile "
+                    android:textSize="14sp"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/appThemeColor"
+                    android:fontFamily="@font/rubik_regular"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity = "center"
+                    android:textAlignment="center" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_below="@+id/mobileLayout"
+            android:id="@+id/commentsLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comment"
+                android:layout_marginBottom="-13dp"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:backgroundTint="@color/white"
+                android:paddingHorizontal="5dp"
+                android:layout_marginLeft="35dp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:translationZ="-20dp"
+                android:background="@drawable/personal_fields_bg"
+                >
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:gravity="center"
+                    android:padding="12dp"
+                    android:id="@+id/comment"
+                    android:textSize="14sp"
+                    android:inputType="text|textMultiLine"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/appThemeColor"
+                    android:fontFamily="@font/rubik_regular"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity = "center"
+                    android:textAlignment="center" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/commentsLayout"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/login_btn"
+            android:text="Submit"
+            android:id="@+id/saveBtn"
+            android:textColor="@color/white"
+            />
+
+    </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

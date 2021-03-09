@@ -1,0 +1,934 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.Fragments.MyChildFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/heading"
+        android:background="@mipmap/internal_header">
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/backBtn"
+            android:background="@android:color/transparent"
+            android:src="@mipmap/back_arrow"
+            android:layout_gravity="center"
+            android:layout_marginTop="-10dp"
+            android:translationZ="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My Child"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:id="@+id/headingText"
+            android:gravity="center"
+            android:layout_marginTop="-10dp"
+            android:layout_marginLeft="-35dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/rubik_bold" />
+    </LinearLayout>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:layout_below="@+id/heading"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:id="@+id/childCard"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="5dp"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/avatar"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/nameLayout"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Name : "
+                            android:id="@+id/title1"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/rubik_bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Usharani Guday"
+                            android:textColor="@color/black"
+                            android:textSize="13sp"
+                            android:id="@+id/childName"
+                            android:fontFamily="@font/rubik_regular" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/nameLayout"
+                        android:id="@+id/educationBriefLayout"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        android:weightSum="2">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Class : "
+                            android:id="@+id/title2"
+                           android:textSize="14sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/rubik_bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10Th"
+                            android:id="@+id/className"
+                            android:textSize="13sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/rubik_regular" />
+                    </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Section : "
+                                android:id="@+id/title3"
+                                android:textSize="14sp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/rubik_bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="A+"
+                                android:textColor="@color/black"
+                                android:textSize="13sp"
+                                android:id="@+id/secName"
+                                android:fontFamily="@font/rubik_regular" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/educationBriefLayout"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="RollNumber : "
+                            android:id="@+id/title4"
+                            android:textSize="14sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/rubik_bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1238101013"
+                            android:textSize="13sp"
+                            android:textColor="@color/black"
+                            android:id="@+id/rollno"
+                            android:fontFamily="@font/rubik_regular" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+<!--perssonal data start-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/childCard"
+            android:id="@+id/personalLayout">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/personalBtnLayout">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/inactivePersonalLayout"
+                android:padding="4dp"
+                android:background="@drawable/btn_default_style"
+                android:layout_margin="10dp"
+                android:weightSum="5.5"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.5"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:src="@mipmap/small_profile" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="4.5"
+                    android:gravity="center"
+                    android:text="Personal Profile"
+                    android:textAlignment="textStart"
+                    android:textSize="15sp"
+                    android:textColor="@color/appThemeColor"
+                    android:fontFamily="@font/rubik_bold"
+                    tools:ignore="RtlCompat" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:src="@mipmap/down_arrow"
+                    android:layout_weight="0.5"
+                    android:padding="5dp"
+                     />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/activePersonalLayout"
+                android:padding="4dp"
+                android:visibility="gone"
+                android:background="@drawable/btn_selected_style"
+                android:layout_margin="10dp"
+                android:weightSum="5.5"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.5"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:src="@mipmap/small_profile_white" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="4.5"
+                    android:gravity="center"
+                    android:text="Personal Profile"
+                    android:textAlignment="textStart"
+                    android:textSize="15sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/rubik_bold"
+                    tools:ignore="RtlCompat" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:src="@mipmap/drop_down_whitee"
+                    android:layout_weight="0.5"
+                    android:padding="5dp"
+                    />
+            </LinearLayout>
+           </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/personalDataContent"
+                android:layout_below="@+id/personalBtnLayout" >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fullNameLayout">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Full Name"
+                        android:layout_marginBottom="-13dp"
+                        android:background="@color/white"
+                        android:paddingHorizontal="5dp"
+                        android:layout_marginLeft="35dp" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="10dp"
+                        android:translationZ="-20dp"
+                        android:background="@drawable/personal_fields_bg"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Usha Rani Guday"
+                            android:id="@+id/fullName"
+                            android:fontFamily="@font/rubik_regular"
+                            android:textSize="16sp"
+                            android:textColor="@color/black"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity = "center"
+                            android:textAlignment="center" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fullNameLayout"
+                    android:id="@+id/gender_and_dob_layout"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/genderLayout">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gender"
+                            android:layout_marginBottom="-13dp"
+                            android:background="@color/white"
+                            android:backgroundTint="@color/white"
+                            android:paddingHorizontal="5dp"
+                            android:layout_marginLeft="35dp" />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_margin="10dp"
+                            android:translationZ="-20dp"
+                            android:background="@drawable/personal_fields_bg"
+                            >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Female"
+                                android:id="@+id/gender"
+                                android:textSize="16sp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/rubik_regular"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity = "center"
+                                android:textAlignment="center" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dobLayout">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Date of Birth"
+                            android:layout_marginBottom="-13dp"
+                            android:background="@color/white"
+                            android:backgroundTint="@color/white"
+                            android:paddingHorizontal="5dp"
+                            android:layout_marginLeft="35dp" />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_margin="10dp"
+                            android:translationZ="-20dp"
+                            android:background="@drawable/personal_fields_bg"
+                            >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="28-10-1996"
+                                android:id="@+id/dob"
+                                android:fontFamily="@font/rubik_regular"
+                                android:textSize="16sp"
+                                android:textColor="@color/black"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity = "center"
+                                android:textAlignment="center" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/gender_and_dob_layout"
+                    android:id="@+id/birthplaceLayout">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Birth Place"
+                        android:layout_marginBottom="-13dp"
+                        android:background="@color/white"
+                        android:backgroundTint="@color/white"
+                        android:paddingHorizontal="5dp"
+                        android:layout_marginLeft="35dp" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="10dp"
+                        android:translationZ="-20dp"
+                        android:background="@drawable/personal_fields_bg"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Visakhapatnam"
+                            android:id="@+id/birthplace"
+                            android:textSize="16sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/rubik_regular"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity = "center"
+                            android:textAlignment="center" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/birthplaceLayout"
+                    android:id="@+id/nationality_and_rel_layout"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/nationalityLayout">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nationality"
+                            android:layout_marginBottom="-13dp"
+                            android:background="@color/white"
+                            android:backgroundTint="@color/white"
+                            android:paddingHorizontal="5dp"
+                            android:layout_marginLeft="35dp" />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_margin="10dp"
+                            android:translationZ="-20dp"
+                            android:background="@drawable/personal_fields_bg"
+                            >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Indian"
+                                android:id="@+id/nationality"
+                                android:textSize="16sp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/rubik_regular"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity = "center"
+                                android:textAlignment="center" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/relLayout">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Religion"
+                            android:layout_marginBottom="-13dp"
+                            android:background="@color/white"
+                            android:backgroundTint="@color/white"
+                            android:paddingHorizontal="5dp"
+                            android:layout_marginLeft="35dp" />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_margin="10dp"
+                            android:translationZ="-20dp"
+                            android:background="@drawable/personal_fields_bg"
+                            >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Hindu"
+                                android:id="@+id/religion"
+                                android:textSize="16sp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/rubik_regular"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity = "center"
+                                android:textAlignment="center" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+<!--personal date eend-->
+<!--        academics start-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/acaademicsLayout"
+            android:layout_below="@id/personalLayout">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/academicBtnLayout">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/inactive_academic_Layout"
+                android:padding="4dp"
+                android:background="@drawable/btn_default_style"
+                android:layout_margin="10dp"
+                android:weightSum="5.5"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.5"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:src="@mipmap/academic" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="4.5"
+                    android:gravity="center"
+                    android:text="Academics"
+                    android:textAlignment="textStart"
+                    android:textSize="15sp"
+                    android:textColor="@color/appThemeColor"
+                    android:fontFamily="@font/rubik_bold"
+                    tools:ignore="RtlCompat" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:src="@mipmap/down_arrow"
+                    android:layout_weight="0.5"
+                    android:padding="5dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/active_academic_Layout"
+                android:padding="4dp"
+                android:visibility="gone"
+                android:background="@drawable/btn_selected_style"
+                android:layout_margin="10dp"
+                android:weightSum="5.5"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.5"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:src="@mipmap/academic_white" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="4.5"
+                    android:gravity="center"
+                    android:text="Academics"
+                    android:textAlignment="textStart"
+                    android:textSize="15sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/rubik_bold"
+                    tools:ignore="RtlCompat" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:src="@mipmap/drop_down_whitee"
+                    android:layout_weight="0.5"
+                    android:padding="5dp"
+                    />
+            </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_below="@+id/academicBtnLayout"
+                android:id="@+id/examsList" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/guardianLayout"
+            android:visibility="gone"
+            android:layout_below="@id/acaademicsLayout">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/guardianBtnLayout">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/inactive_guardian_Layout"
+                    android:padding="4dp"
+                    android:background="@drawable/btn_default_style"
+                    android:layout_margin="10dp"
+                    android:weightSum="5.5"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="0.5"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:src="@mipmap/avater" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="4.5"
+                        android:gravity="center"
+                        android:text="Guardian"
+                        android:textAlignment="textStart"
+                        android:textSize="15sp"
+                        android:textColor="@color/appThemeColor"
+                        android:fontFamily="@font/rubik_bold"
+                        tools:ignore="RtlCompat" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:src="@mipmap/down_arrow"
+                        android:layout_weight="0.5"
+                        android:padding="5dp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/active_guardian_Layout"
+                    android:padding="4dp"
+                    android:visibility="gone"
+                    android:background="@drawable/btn_selected_style"
+                    android:layout_margin="10dp"
+                    android:weightSum="5.5"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="0.5"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:src="@mipmap/avater" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="4.5"
+                        android:gravity="center"
+                        android:text="Guardian"
+                        android:textAlignment="textStart"
+                        android:textSize="15sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/rubik_bold"
+                        tools:ignore="RtlCompat" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:src="@mipmap/drop_down_whitee"
+                        android:layout_weight="0.5"
+                        android:padding="5dp"
+                        />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_below="@+id/guardianBtnLayout"
+                android:id="@+id/guardanList" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/addressLayout"
+            android:layout_below="@+id/guardianLayout">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/addressBtnLayout">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/inactive_address_Layout"
+                    android:padding="4dp"
+                    android:background="@drawable/btn_default_style"
+                    android:layout_margin="10dp"
+                    android:weightSum="5.5"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="0.5"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:src="@mipmap/home_run" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="4.5"
+                        android:gravity="center"
+                        android:text="Address"
+                        android:textAlignment="textStart"
+                        android:textSize="15sp"
+                        android:textColor="@color/appThemeColor"
+                        android:fontFamily="@font/rubik_bold"
+                        tools:ignore="RtlCompat" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:src="@mipmap/down_arrow"
+                        android:layout_weight="0.5"
+                        android:padding="5dp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/active_address_Layout"
+                    android:padding="4dp"
+                    android:visibility="gone"
+                    android:background="@drawable/btn_selected_style"
+                    android:layout_margin="10dp"
+                    android:weightSum="5.5"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="0.5"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:src="@mipmap/home_run_white" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="4.5"
+                        android:gravity="center"
+                        android:text="Address"
+                        android:textAlignment="textStart"
+                        android:textSize="15sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/rubik_bold"
+                        tools:ignore="RtlCompat" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/drop_down_whitee"
+                        android:layout_margin="5dp"
+                        android:layout_weight="0.5"
+                        android:padding="5dp"
+                        />
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/addressContentLayout"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/addressBtnLayout">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/currentAddressLayout">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Current Address"
+                        android:layout_marginBottom="-13dp"
+                        android:background="@color/white"
+                        android:backgroundTint="@color/white"
+                        android:paddingHorizontal="5dp"
+                        android:layout_marginLeft="35dp" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:translationZ="-20dp"
+                        android:background="@drawable/personal_fields_bg"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:text="D.No 31-12-33/6, allipuram, Kantam Vari Street , Visakhapatnam "
+                            android:id="@+id/currentAddress"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/rubik_regular"
+                            android:textColor="@color/black"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity = "center"
+                            android:textAlignment="center" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/currentAddressLayout"
+                    android:id="@+id/permentantAddressLayout">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Permenant Address"
+                        android:layout_marginBottom="-13dp"
+                        android:background="@color/white"
+                        android:backgroundTint="@color/white"
+                        android:paddingHorizontal="5dp"
+                        android:layout_marginLeft="35dp" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:translationZ="-20dp"
+                        android:background="@drawable/personal_fields_bg"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:text="D.No 31-12-33/6, allipuram, Kantam Vari Street , Visakhapatnam "
+                            android:id="@+id/permenantAddress"
+                            android:textSize="14sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/rubik_regular"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity = "center"
+                            android:textAlignment="center" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>
+
+</RelativeLayout>

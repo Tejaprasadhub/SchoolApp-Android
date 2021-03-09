@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.Fragments.ParentSide.AttendanceFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/heading"
+        android:background="@mipmap/internal_header">
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/backBtn"
+            android:background="@android:color/transparent"
+            android:src="@mipmap/back_arrow"
+            android:layout_gravity="center"
+            android:layout_marginTop="-10dp"
+            android:translationZ="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Attendance"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_marginTop="-10dp"
+            android:layout_marginLeft="-35dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/rubik_bold" />
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/heading">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="5"
+                android:id="@+id/typesLayout"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Present"
+                    android:textAlignment="center"
+                    android:padding="3dp"
+                    android:layout_marginRight="2dp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/rubik_regular"
+                    android:background="@color/success_text_color" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Absent"
+                    android:textAlignment="center"
+                    android:padding="3dp"
+                    android:layout_marginRight="2dp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:textColor="@color/white"
+                    android:background="@color/fail_text_color" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Late"
+                    android:textAlignment="center"
+                    android:padding="3dp"
+                    android:layout_marginRight="2dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/rubik_regular"
+                    android:background="@android:color/holo_orange_light" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Holiday"
+                    android:textAlignment="center"
+                    android:padding="3dp"
+                    android:layout_marginRight="2dp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:textColor="@color/white"
+                    android:background="@android:color/holo_purple" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Half Day"
+                    android:textAlignment="center"
+                    android:padding="3dp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/rubik_regular"
+                    android:background="@color/colorPrimaryDark" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/typesLayout"
+                android:layout_marginHorizontal="5dp"
+                android:orientation="horizontal"
+                android:id="@+id/month_year_layout"
+                android:background="@color/appThemeColor"
+                android:padding="5dp"
+                android:weightSum="5"
+                android:layout_marginVertical="5dp">
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:src="@drawable/backward_arrow"
+                    android:id="@+id/previousMonth"
+                    android:background="@android:color/transparent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="October 2020"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:id="@+id/month_and_year"
+                    android:fontFamily="@font/rubik_bold"
+                    />
+
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:src="@drawable/forward_arrow"
+                    android:id="@+id/nextMonth"
+                    android:background="@android:color/transparent" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="7"
+                android:id="@+id/weekdaysLayout"
+                android:layout_below="@+id/month_year_layout"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="SUN"
+                android:textAlignment="center"
+                android:padding="3dp"
+                android:layout_marginRight="2dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/rubik_regular"
+                android:background="@color/appThemeColor" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="MON"
+                    android:textAlignment="center"
+                    android:padding="3dp"
+                    android:layout_marginRight="2dp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/rubik_regular"
+                    android:background="@color/appThemeColor" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TUE"
+                    android:textAlignment="center"
+                    android:padding="3dp"
+                    android:layout_marginRight="2dp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/rubik_regular"
+                    android:background="@color/appThemeColor" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="WED"
+                    android:textAlignment="center"
+                    android:padding="3dp"
+                    android:layout_marginRight="2dp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/rubik_regular"
+                    android:background="@color/appThemeColor" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="THU"
+                    android:textAlignment="center"
+                    android:padding="3dp"
+                    android:layout_marginRight="2dp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/rubik_regular"
+                    android:background="@color/appThemeColor" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="FRI"
+                    android:textAlignment="center"
+                    android:padding="3dp"
+                    android:layout_marginRight="2dp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/rubik_regular"
+                    android:background="@color/appThemeColor" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="SAT"
+                    android:textAlignment="center"
+                    android:padding="3dp"
+                    android:layout_marginRight="2dp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/rubik_regular"
+                    android:background="@color/appThemeColor" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/myCalenderView"
+                android:layout_margin="5dp"
+                android:background="@color/white"
+                android:layout_below="@+id/weekdaysLayout"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_below="@+id/myCalenderView"
+                android:background="@color/white"
+                app:cardCornerRadius="5dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:background="@color/appThemeOpacity"
+                        android:text="Attendance Summary"
+                        android:textAlignment="center"
+                        android:id="@+id/attendanceSummary"
+                        android:textColor="@color/appThemeColor"
+                        android:fontFamily="@font/rubik_bold"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/totalDaysLayout"
+                        android:layout_below="@+id/attendanceSummary"
+                        android:gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total Working Days : "
+                            android:id="@+id/title1"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/rubik_regular" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="24"
+                            android:textColor="@color/appThemeColor"
+                            android:textSize="15sp"
+                            android:layout_gravity="center"
+                            android:id="@+id/totalWorkingdays"
+                            android:fontFamily="@font/rubik_regular" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/attendanceNotMarkedLayout"
+                        android:layout_below="@+id/totalDaysLayout"
+                        android:gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Attendance Not Marked : "
+                            android:id="@+id/title2"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/rubik_regular" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="18"
+                            android:textColor="@color/appThemeColor"
+                            android:textSize="15sp"
+                            android:layout_gravity="center"
+                            android:textAlignment="center"
+                            android:id="@+id/attendanceNotMarked"
+                            android:fontFamily="@font/rubik_regular" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:id="@+id/present_and_abscent_layout"
+                        android:layout_below="@+id/attendanceNotMarkedLayout">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/presentLayout"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No. of Days Present : "
+                            android:id="@+id/title3"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/rubik_regular" />
+
+                        <TextView
+                            android:id="@+id/presentDays"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/rubik_regular"
+                            android:text="4"
+                            android:textAlignment="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/appThemeColor"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/abscentLayout"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No. of Days Abscent : "
+                            android:id="@+id/title4"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/rubik_regular" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/appThemeColor"
+                            android:textSize="15sp"
+                            android:textAlignment="center"
+                            android:layout_gravity="center"
+                            android:id="@+id/abscentDays"
+                            android:fontFamily="@font/rubik_regular" />
+
+                    </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:weightSum="3"
+                        android:orientation="horizontal"
+                        android:id="@+id/restLayout"
+                        android:layout_below="@+id/present_and_abscent_layout">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/holidayLayout"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/title6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rubik_regular"
+                            android:text="Holidays: "
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/appThemeColor"
+                            android:textSize="15sp"
+                            android:textAlignment="center"
+                            android:layout_gravity="center"
+                            android:id="@+id/holidays"
+                            android:fontFamily="@font/rubik_regular" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/lateLayout"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No.of Days late : "
+                            android:id="@+id/title7"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/rubik_regular" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1"
+                            android:textColor="@color/appThemeColor"
+                            android:textSize="15sp"
+                            android:textAlignment="center"
+                            android:layout_gravity="center"
+                            android:id="@+id/lateDays"
+                            android:fontFamily="@font/rubik_regular" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/halfDayLayout"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Half-Days : "
+                            android:id="@+id/title8"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/rubik_regular" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="18"
+                            android:textColor="@color/appThemeColor"
+                            android:textSize="15sp"
+                            android:textAlignment="center"
+                            android:layout_gravity="center"
+                            android:id="@+id/halfDays"
+                            android:fontFamily="@font/rubik_regular" />
+                    </LinearLayout>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:translationZ="10dp"
+        android:gravity="center"
+        android:id="@+id/popupLayout"
+        android:background="#50000000">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:background="@drawable/attendance_info_bg">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="@color/appThemeOpacity"
+                android:text="Date Summary"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:textAlignment="center"
+                android:id="@+id/dateSummary"
+                android:textColor="@color/appThemeColor"
+                android:fontFamily="@font/rubik_bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/dateLayout"
+                android:layout_below="@+id/dateSummary"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:weightSum="2"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Day"
+                        android:id="@+id/dayHeading"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/rubik_regular" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tuesday"
+                        android:textAllCaps="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/dayHeading"
+                        android:textColor="@color/appThemeColor"
+                        android:textSize="13sp"
+                        android:layout_gravity="center"
+                        android:id="@+id/weekDay"
+                        android:fontFamily="@font/rubik_regular" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Date"
+                        android:id="@+id/dateHeading"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/rubik_regular" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2020-10-03"
+                        android:textAllCaps="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/dateHeading"
+                        android:textColor="@color/appThemeColor"
+                        android:textSize="13sp"
+                        android:layout_gravity="center"
+                        android:id="@+id/dateText"
+                        android:fontFamily="@font/rubik_regular" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/infoLayout"
+                android:layout_below="@+id/dateLayout"
+                android:gravity="center"
+                android:weightSum="2"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Timing"
+                        android:id="@+id/timingHeading"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/rubik_regular" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="9:30AM to 05:00PM"
+                        android:textAllCaps="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/timingHeading"
+                        android:textColor="@color/appThemeColor"
+                        android:textSize="13sp"
+                        android:layout_gravity="center"
+                        android:id="@+id/timings"
+                        android:fontFamily="@font/rubik_regular" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Information"
+                        android:id="@+id/infoHeading"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/rubik_regular" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Present"
+                        android:textAllCaps="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/infoHeading"
+                        android:textColor="@color/appThemeColor"
+                        android:textSize="13sp"
+                        android:layout_gravity="center"
+                        android:id="@+id/info"
+                        android:fontFamily="@font/rubik_regular" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/reasonLayout"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/infoLayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reason"
+                    android:id="@+id/reasonHeading"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/rubik_regular" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sick Leave"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/reasonHeading"
+                    android:textColor="@color/appThemeColor"
+                    android:textSize="13sp"
+                    android:layout_gravity="center"
+                    android:id="@+id/reason"
+                    android:fontFamily="@font/rubik_regular" />
+
+            </RelativeLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/reasonLayout"
+                android:layout_margin="10dp"
+                android:background="@drawable/login_btn"
+                android:text="Ok"
+                android:textAllCaps="false"
+                android:id="@+id/okBtn"
+                android:textColor="@color/white"
+                android:padding="10dp"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

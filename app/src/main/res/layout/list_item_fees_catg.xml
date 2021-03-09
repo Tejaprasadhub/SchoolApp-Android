@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:padding="20dp"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="5dp"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:id="@+id/catg">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:id="@+id/name_and_statusLayout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/nameLayout"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name : "
+                    android:id="@+id/title1"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/rubik_bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Usharani Guday"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:id="@+id/childName"
+                    android:fontFamily="@font/rubik_regular" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PENDING"
+                android:padding="3dp"
+                android:id="@+id/pendingCard"
+                android:visibility="gone"
+                android:textColor="#e30219"
+                android:background="#30e30219"
+                android:layout_alignParentEnd="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SUCCESS"
+                android:padding="3dp"
+                android:id="@+id/successCard"
+                android:textColor="#1b960b"
+                android:background="#301b960b"
+                android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:paddingHorizontal="10dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/name_and_statusLayout"
+                android:id="@+id/class_and_rollLayout">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/classNameLayout"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Class : "
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/rubik_bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10th"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:id="@+id/className"
+                        android:fontFamily="@font/rubik_regular" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/rollLayout"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="RollNo : "
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/rubik_bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="123456789"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:id="@+id/paiddate"
+                        android:fontFamily="@font/rubik_regular" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/class_and_rollLayout"
+                android:id="@+id/total_and_dateLayout">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/totalAmtLayout"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Amount : "
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/rubik_bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="RS.12000"
+                        android:textColor="@color/appThemeColor"
+                        android:textSize="14sp"
+                        android:id="@+id/totalAmt"
+                        android:fontFamily="@font/rubik_regular" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/dateLayout"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Paid Date : "
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/rubik_bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="28-05-2020"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:id="@+id/rollNo"
+                        android:fontFamily="@font/rubik_regular" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/total_and_dateLayout"
+                android:id="@+id/paid_and_dueLayout">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:id="@+id/paidLayout"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginRight="1dp"
+                    android:background="@color/appThemeColor"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Paid : "
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/rubik_bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="RS.3000"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:id="@+id/paidAmt"
+                        android:fontFamily="@font/rubik_regular" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginLeft="1dp"
+                    android:background="@color/appThemeColor"
+                    android:id="@+id/dueLayout"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Due : "
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/rubik_bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="RS.1300"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:id="@+id/dueAmt"
+                        android:fontFamily="@font/rubik_regular" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

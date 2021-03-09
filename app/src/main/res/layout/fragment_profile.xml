@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Fragments.MyProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/heading"
+        android:background="@mipmap/internal_header">
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/backBtn"
+            android:background="@android:color/transparent"
+            android:src="@mipmap/back_arrow"
+            android:layout_gravity="center"
+            android:layout_marginTop="-10dp"
+            android:translationZ="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My Profile"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:id="@+id/headingText"
+            android:gravity="center"
+            android:layout_marginTop="-10dp"
+            android:layout_marginLeft="-35dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/rubik_bold" />
+    </LinearLayout>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/heading"
+    android:background="@color/white">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/personalDetailsLayout">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/personalDetailsHeading"
+            android:text="Pesonal Details :"
+            android:layout_margin="15dp"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/rubik_bold"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/personalDetailsHeading"
+            android:id="@+id/fullNameLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Full Name"
+                android:layout_marginBottom="-13dp"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:backgroundTint="@color/white"
+                android:paddingHorizontal="5dp"
+                android:layout_marginLeft="35dp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:translationZ="-20dp"
+                android:background="@drawable/personal_fields_bg"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="12dp"
+                    android:text="Usharani Guday"
+                    android:id="@+id/fullNameTv"
+                    android:textSize="14sp"
+                    android:textColor="@color/appThemeColor"
+                    android:fontFamily="@font/rubik_regular"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity = "center"
+                    android:textAlignment="center" />
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="12dp"
+                    android:text="Usharani Guday"
+                    android:id="@+id/fullNameET"
+                    android:hint=" name "
+                    android:textSize="14sp"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/appThemeColor"
+                    android:fontFamily="@font/rubik_regular"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity = "center"
+                    android:textAlignment="center" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/fullNameLayout"
+            android:id="@+id/emailLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:layout_marginBottom="-13dp"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:backgroundTint="@color/white"
+                android:paddingHorizontal="5dp"
+                android:layout_marginLeft="35dp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:translationZ="-20dp"
+                android:background="@drawable/personal_fields_bg"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="12dp"
+                    android:text="usharani19996@gmail.com"
+                    android:id="@+id/emailTv"
+                    android:visibility="gone"
+                    android:textSize="14sp"
+                    android:textColor="@color/appThemeColor"
+                    android:fontFamily="@font/rubik_regular"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity = "center"
+                    android:textAlignment="center" />
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="12dp"
+                    android:text="Usharani@gmail.com"
+                    android:hint="yourname@gmail.com"
+                    android:id="@+id/emailET"
+                    android:textSize="14sp"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/appThemeColor"
+                    android:fontFamily="@font/rubik_regular"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity = "center"
+                    android:textAlignment="center" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/emailLayout"
+            android:id="@+id/gender_and_phn_layout"
+            android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/phoneLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone"
+                android:layout_marginBottom="-13dp"
+                android:background="@color/white"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/white"
+                android:paddingHorizontal="5dp"
+                android:layout_marginLeft="35dp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:translationZ="-20dp"
+                android:background="@drawable/personal_fields_bg"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="12dp"
+                    android:text="1234567890"
+                    android:id="@+id/phoneTv"
+                    android:visibility="gone"
+                    android:textSize="14sp"
+                    android:textColor="@color/appThemeColor"
+                    android:fontFamily="@font/rubik_regular"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity = "center"
+                    android:textAlignment="center" />
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="12dp"
+                    android:text="1234567890"
+                    android:hint="phone Number"
+                    android:id="@+id/phoneET"
+                    android:textSize="14sp"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/appThemeColor"
+                    android:fontFamily="@font/rubik_regular"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity = "center"
+                    android:textAlignment="center" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:id="@+id/genderLayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gender"
+                    android:layout_marginBottom="-13dp"
+                    android:background="@color/white"
+                    android:textColor="@color/black"
+                    android:backgroundTint="@color/white"
+                    android:paddingHorizontal="5dp"
+                    android:layout_marginLeft="35dp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:translationZ="-20dp"
+                    android:background="@drawable/personal_fields_bg"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="12dp"
+                        android:text="Female"
+                        android:id="@+id/genderTv"
+                        android:textSize="14sp"
+                        android:textColor="@color/appThemeColor"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity = "center"
+                        android:textAlignment="center" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/gender_and_phn_layout"
+            android:id="@+id/religion_and_nationality_layout"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/religion">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Religion"
+                    android:layout_marginBottom="-13dp"
+                    android:background="@color/white"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/black"
+                    android:paddingHorizontal="5dp"
+                    android:layout_marginLeft="35dp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:translationZ="-20dp"
+                    android:background="@drawable/personal_fields_bg"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="12dp"
+                        android:text="1234567890"
+                        android:id="@+id/religionTv"
+                        android:visibility="gone"
+                        android:textSize="14sp"
+                        android:textColor="@color/appThemeColor"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity = "center"
+                        android:textAlignment="center" />
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="12dp"
+                        android:text="Hindu"
+                        android:hint="Religion"
+                        android:id="@+id/religionEt"
+                        android:textSize="14sp"
+                        android:background="@android:color/transparent"
+                        android:textColor="@color/appThemeColor"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity = "center"
+                        android:textAlignment="center" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/nationalityLayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nationality"
+                    android:layout_marginBottom="-13dp"
+                    android:background="@color/white"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/black"
+                    android:paddingHorizontal="5dp"
+                    android:layout_marginLeft="35dp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:translationZ="-20dp"
+                    android:background="@drawable/personal_fields_bg"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="12dp"
+                        android:text="Indian"
+                        android:id="@+id/nationalityTv"
+                        android:textSize="14sp"
+                        android:textColor="@color/appThemeColor"
+                        android:visibility="gone"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity = "center"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="12dp"
+                        android:text="Indian"
+                        android:hint="Nationaity"
+                        android:id="@+id/nationalityEt"
+                        android:textSize="14sp"
+                        android:background="@android:color/transparent"
+                        android:textColor="@color/appThemeColor"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity = "center"
+                        android:textAlignment="center" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/religion_and_nationality_layout"
+            android:id="@+id/locationLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:layout_marginBottom="-13dp"
+                android:background="@color/white"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/black"
+                android:paddingHorizontal="5dp"
+                android:layout_marginLeft="35dp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:translationZ="-20dp"
+                android:background="@drawable/personal_fields_bg"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="12dp"
+                    android:text="DNo-31-12-33/6 Allipuram Kantam Vari Street , Visakhapatnam"
+                    android:id="@+id/addressTv"
+                    android:textSize="14sp"
+                    android:visibility="gone"
+                    android:textColor="@color/appThemeColor"
+                    android:fontFamily="@font/rubik_regular"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity = "center"
+                    android:textAlignment="center" />
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="12dp"
+                    android:text="D.No:31-12-33/6, Allipuram Kantam Vari Street, Visakhapatnam"
+                    android:hint="Address"
+                    android:id="@+id/addressEt"
+                    android:textSize="14sp"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/appThemeColor"
+                    android:fontFamily="@font/rubik_regular"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity = "center"
+                    android:textAlignment="center" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/locationLayout"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/login_btn"
+            android:text="Save"
+            android:id="@+id/saveBtn"
+            android:textColor="@color/white"
+            />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/childLayout"
+            android:layout_below="@+id/personalDetailsLayout">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/mychildrenHeading"
+                android:text="Childen Details : "
+                android:layout_margin="15dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/rubik_bold"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mychildrenHeading"
+                android:layout_margin="5dp"
+                android:id="@+id/myChildList" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</ScrollView>
+
+
+</RelativeLayout>
+

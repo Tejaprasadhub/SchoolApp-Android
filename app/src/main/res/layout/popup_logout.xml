@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#35000000">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/logout_bg"
+    android:layout_alignParentBottom="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="20dp"
+        android:id="@+id/logout_heading"
+        android:layout_marginTop="100dp">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/logout_white" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:fontFamily="@font/rubik_bold"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text=" Are you Sure you want to Logout ?"
+        android:layout_below="@+id/logout_heading"
+        android:layout_marginLeft="20dp"
+        android:textSize="14sp"
+        android:id="@+id/confirm_text"
+        android:textColor="@color/white"
+        android:fontFamily="@font/rubik_regular" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_below="@id/confirm_text"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="yes"
+            android:id="@+id/yesBtn"
+            android:background="@drawable/logout_btn_bg"
+            android:textColor="@color/appThemeColor" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="no"
+            android:id="@+id/noBtn"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/logout_btn_bg"
+            android:textColor="@color/appThemeColor" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+
+</RelativeLayout>

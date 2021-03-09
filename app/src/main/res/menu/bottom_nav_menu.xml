@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_noticeboard"
+        android:icon="@mipmap/notesboard"
+        android:title="NoticeBoard"
+        />
+
+    <item
+        android:id="@+id/navigation_refer"
+        android:icon="@mipmap/refer"
+        android:title="Refer App" />
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@mipmap/home"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/navigation_about"
+        android:icon="@mipmap/info"
+        android:title="About Us" />
+
+    <item
+        android:id="@+id/navigation_mystuff"
+        android:icon="@mipmap/mystuff"
+        android:title="My Stuff" />
+
+</menu>

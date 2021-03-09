@@ -1,0 +1,131 @@
+[
+  {
+    "id": "AMNT",
+    "name" :"Fees",
+    "image":"https://thumbs.dreamstime.com/b/speech-bubble-fees-vector-illustration-icon-concept-isolated-white-background-156725854.jpg",
+    "catgData" : [
+      {
+        "id":"1",
+        "name" : "G Usha Rani",
+        "class" : "10th",
+        "roll":"123456789",
+        "paid_date":"12-10-2020",
+        "total" : "10000",
+        "paid":"5800",
+        "due": "4200",
+        "status":"PEN"
+      },
+      {
+        "id":"1",
+        "name" : "G Usha Rani",
+        "class" : "10th",
+        "roll":"123456789",
+        "paid_date":"12-05-2020",
+        "total" : "5000",
+        "paid":"5000",
+        "due": "",
+        "status":"CMP"
+      },
+      {
+        "id":"1",
+        "name" : "G Usha Rani",
+        "class" : "10th",
+        "roll":"123456789",
+        "paid_date":"12-09-2019",
+        "total" : "5000",
+        "paid":"5000",
+        "due": "",
+        "status":"CMP"
+      }
+    ]
+  },
+  {
+    "id": "BUS",
+    "name" :"Bus Fee",
+    "image":"https://img.favpng.com/19/5/12/bus-computer-icons-icon-design-png-favpng-FT09L2NsZk2aafaaHvsDxUyn7.jpg",
+    "catgData" : [
+      {
+        "id":"1",
+        "name" : "G Usha Rani",
+        "class" : "10th",
+        "roll":"123456789",
+        "paid_date":"12-10-2020",
+        "total" : "3000",
+        "paid":"0",
+        "due": "3000",
+        "status":"PEN"
+      },
+      {
+        "id":"1",
+        "name" : "G Usha Rani",
+        "class" : "9th",
+        "roll":"123456789",
+        "paid_date":"12-05-2020",
+        "total" : "3000",
+        "paid":"3000",
+        "due": "",
+        "status":"CMP"
+      }
+    ]
+  },
+  {
+    "id": "EXM",
+    "name" :"Exam Fee",
+    "image":"data:image/png;base64,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",
+    "catgData" : [
+      {
+        "id":"1",
+        "name" : "G Usha Rani",
+        "class" : "10th",
+        "roll":"123456789",
+        "examType" : "Annual Exam",
+        "paid_date":"12-10-2020",
+        "total" : "8000",
+        "paid":"0",
+        "due": "8000",
+        "status":"PEN"
+      },
+      {
+        "id":"1",
+        "name" : "G Usha Rani",
+        "class" : "9th",
+        "roll":"123456789",
+        "paid_date":"12-05-2020",
+        "examType" : "Quarterly Exam",
+        "total" : "3000",
+        "paid":"3000",
+        "due": "",
+        "status":"CMP"
+      }
+    ]
+  },
+  {
+    "id": "TUT",
+    "name" :"Tution Fee",
+    "image":"https://img.favpng.com/19/5/12/bus-computer-icons-icon-design-png-favpng-FT09L2NsZk2aafaaHvsDxUyn7.jpg",
+    "catgData" : [
+      {
+        "id":"1",
+        "name" : "G Usha Rani",
+        "class" : "10th",
+        "roll":"123456789",
+        "paid_date":"12-10-2020",
+        "total" : "3000",
+        "paid":"0",
+        "due": "3000",
+        "status":"PEN"
+      },
+      {
+        "id":"1",
+        "name" : "G Usha Rani",
+        "class" : "9th",
+        "roll":"123456789",
+        "paid_date":"12-05-2020",
+        "total" : "3000",
+        "paid":"3000",
+        "due": "",
+        "status":"CMP"
+      }
+    ]
+  }
+]

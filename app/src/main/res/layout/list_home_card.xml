@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.cardview.widget.CardView
+    android:layout_width="wrap_content"
+    android:padding="20dp"
+    app:cardElevation="5dp"
+    android:layout_margin="5dp"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/catg">
+        <ImageView
+            android:layout_width="70dp"
+            android:id="@+id/icon"
+            android:layout_height="70dp"
+            android:scaleType="fitCenter"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dp"
+            android:src="@mipmap/teacher"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:text="Teachers"
+            android:id="@+id/name"
+            android:textSize="15sp"
+            android:fontFamily="@font/rubik_semibold"
+            android:textColor="@color/appThemeColor"
+            android:textAlignment="center"
+            android:maxLines="1"
+            android:layout_below="@+id/icon"
+            android:layout_marginBottom="10dp"
+            />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:translationZ="10dp"
+        android:visibility="gone"
+        android:id="@+id/isSelect"
+        android:layout_marginLeft="115dp"
+        android:src="@mipmap/correct"/>
+</RelativeLayout>

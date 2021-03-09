@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Fragments.ResultFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/heading"
+        android:background="@mipmap/internal_header">
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/backBtn"
+            android:background="@android:color/transparent"
+            android:src="@mipmap/back_arrow"
+            android:layout_gravity="center"
+            android:layout_marginTop="-10dp"
+            android:translationZ="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Results"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_marginTop="-10dp"
+            android:layout_marginLeft="-35dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/rubik_bold" />
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/heading"
+        android:background="@color/white">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/serachLayout">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="2"
+    android:id="@+id/serachContentLayout"
+    android:layout_margin="5dp"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/classNameSelect"
+        android:layout_margin="5dp"
+        android:weightSum="3"
+        android:background="@drawable/edittext_bg"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:fontFamily="@font/rubik_regular"
+                android:textSize="15sp"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:id="@+id/selectClass"
+                android:text="Class"
+                android:textColor="@color/appThemeColor"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:layout_weight="2.5"
+                android:id="@+id/classSpinner"
+                android:background="@android:color/transparent"
+                android:textAlignment="textStart"
+                android:fontFamily="@font/rubik_regular"
+                android:textSize="15sp"
+                android:text="Class"
+                android:textColor="@color/appThemeColor"
+                tools:ignore="RtlCompat" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="0.5"
+            android:src="@mipmap/down_arrow"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:weightSum="3"
+        android:background="@drawable/edittext_bg"
+        android:layout_margin="5dp"
+        android:id="@+id/examNameSelect"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:fontFamily="@font/rubik_regular"
+                android:textSize="15sp"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:id="@+id/selectExam"
+                android:text="Exam"
+                android:textColor="@color/appThemeColor"/>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:layout_weight="2.5"
+                android:background="@android:color/transparent"
+                android:id="@+id/examSpinner"
+                android:textAlignment="textStart"
+                android:fontFamily="@font/rubik_regular"
+                android:textSize="15sp"
+                android:text="Class"
+                android:textColor="@color/appThemeColor"
+                tools:ignore="RtlCompat" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="0.5"
+            android:src="@mipmap/down_arrow"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:background="@drawable/login_btn"
+                android:layout_margin="5dp"
+                android:layout_below="@id/serachContentLayout"
+                android:id="@+id/searchBtnLayout"
+                android:visibility="gone"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="0.5"
+                    android:src="@mipmap/down_arrow"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:layout_marginRight="5dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:layout_weight="2.5"
+                    android:textSize="15sp"
+                    android:text="Find Result"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/rubik_bold"
+                    android:textColor="@color/white"/>
+
+
+            </LinearLayout>
+            </RelativeLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/resultDataLayout"
+    android:layout_below="@+id/serachLayout">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/examdetailsLayout"
+                android:layout_margin="10dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/content_layout"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Exam : "
+                                android:layout_marginLeft="10dp"
+                                android:textSize="14sp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/rubik_bold"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Half-Yearly"
+                                android:id="@+id/examName"
+                                android:lines="1"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginLeft="10dp"
+                                android:textColor="@color/black"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/rubik_regular"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:id="@+id/classlayout"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Class : "
+                                android:layout_marginLeft="10dp"
+                                android:textSize="14sp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/rubik_bold"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tenth"
+                                android:id="@+id/className"
+                                android:layout_marginLeft="10dp"
+                                android:textColor="@color/black"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/rubik_regular"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/content_layout"
+                        android:id="@+id/dateLayout"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Start Date :"
+                                android:layout_marginLeft="10dp"
+                                android:textSize="14sp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/rubik_bold"/>
+
+                            <TextView
+                                android:id="@+id/startdate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="17dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="5dp"
+                                android:fontFamily="@font/rubik_regular"
+                                android:lines="1"
+                                android:ellipsize="end"
+                                android:text="28-10-2020"
+                                android:textColor="@color/black"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="End Date :"
+                                android:layout_marginLeft="10dp"
+                                android:textSize="14sp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/rubik_bold"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="20-10-1900"
+                                android:id="@+id/endDate"
+                                android:ellipsize="end"
+                                android:lines="1"
+                                android:layout_marginLeft="10dp"
+                                android:textColor="@color/black"
+                                android:textSize="11sp"
+                                android:fontFamily="@font/rubik_regular"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/marksLayout"
+                        android:layout_below="@+id/dateLayout"
+                        android:weightSum="2">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Total Marks : "
+                                android:layout_marginLeft="10dp"
+                                android:textSize="14sp"
+                                android:id="@+id/total_heading"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/rubik_bold"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="600"
+                                android:id="@+id/totalmarks"
+                                android:layout_marginLeft="10dp"
+                                android:textColor="@color/black"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/rubik_regular"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Secured Marks : "
+                                android:layout_marginLeft="10dp"
+                                android:textSize="14sp"
+                                android:id="@+id/securedLayout"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/rubik_bold"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="600"
+                                android:id="@+id/securedmarks"
+                                android:layout_marginLeft="10dp"
+                                android:textColor="@color/black"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/rubik_regular"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/marksLayout"
+                        android:id="@+id/statusLayout"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Status :"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="14sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/rubik_bold"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Passed"
+                            android:id="@+id/examStatus"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/black"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/rubik_regular"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Subjects : "
+                        android:layout_below="@+id/statusLayout"
+                        android:id="@+id/subjectHeading"
+                        android:textColor="@color/appThemeColor"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/rubik_bold"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/subjectList"
+                        android:layout_below="@+id/subjectHeading" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+               android:layout_marginTop="150dp"
+                android:id="@+id/noDataLayout"
+                android:visibility="gone"
+                android:layout_below="@+id/serachLayout">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/appThemeColor"
+                    android:text="No Result Found"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

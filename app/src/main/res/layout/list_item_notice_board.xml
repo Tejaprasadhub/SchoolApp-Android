@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#EFEEEE"
+        android:layout_margin="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_selected_style"
+                android:orientation="horizontal"
+                android:id="@+id/noticeHeadingLayout"
+                android:padding="5dp">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@mipmap/notesboard_white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Notice Heading-1"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/white"
+                    android:id="@+id/noticeHeading"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/rubik_bold"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="28 Oct 2020"
+                    android:layout_gravity="center"
+                    android:gravity="end"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/white"
+                    android:id="@+id/noticeDate"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/rubik_regular"
+                    />
+            </LinearLayout>
+
+
+            <uk.co.deanwild.flowtextview.FlowTextView
+                android:id="@+id/notice_desc"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:fontFamily= "@font/rubik_regular"
+                android:layout_margin="10dp"
+                android:layout_below="@+id/noticeHeadingLayout"
+                android:text= "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:padding="10dip"
+                    android:id="@+id/notice_image"
+                    android:src="@mipmap/no_image"/>
+            </uk.co.deanwild.flowtextview.FlowTextView>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
